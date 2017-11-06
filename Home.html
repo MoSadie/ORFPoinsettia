@@ -1,314 +1,327 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="home.js"></script>
-		<link rel="stylesheet" href="Home.css">
 
-        <title>Olympia Robotics Poinsettia Sales</title>
-    </head>
-    <body>
-        <p>
+<head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-</p>
-<h1 class="text" style="text-align: center;color: white;">
-	Olympia Robotics Federation Poinsettia Sales
-</h1>
+	<script src="home.js"></script>
+	<link rel="stylesheet" href="Home.css">
 
-<form id="orderForm" method="post" action="createOrder.php">
-<fieldset>
-<legend><h2 class="text">Poinsettia Order:</h2></legend>
-<table border="1" cellpadding="10" cellspacing="0" style="width:50%;margin: auto;color:white;">
-	<tbody>
-		<tr>
-			<td>
-				Size
-			</td>
-			<td>
-				Red
-			</td>
-			<td>
-				White
-			</td>
-			<td>
-				Pink
-			</td>
-		</tr>
-		<tr>
-			<td>
-				6&quot; Pot  ($12)
-			</td>
-			<td>
-				<input class="shortBox" id="SixRed" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="SixWhite" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="SixPink" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-		</tr>
-		<tr>
-			<td>
-				8 1/2&quot; Pot  ($24)
-			</td>
-			<td>
-				<input class="shortBox" id="EightPointFiveRed" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="EightPointFiveWhite" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="EightPointFivePink" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-		</tr>
-		<tr>
-			<td>
-				10&quot; Pot  ($36)
-			</td>
-			<td>
-				<input class="shortBox" id="TenRed" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="TenWhite" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="TenPink" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-		</tr>
-		<tr>
-			<td>
-				10&quot; Hanging Pot  ($36)
-			</td>
-			<td>
-				<input class="shortBox" id="TenHangingRed" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="TenHangingWhite" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="TenHangingPink" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-		</tr>
-		<tr>
-			<td>
-				10&quot; Centerpiece  ($36)
-			</td>
-			<td>
-				<input class="shortBox" id="TenCenterRed" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="TenCenterWhite" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-			<td>
-				<input class="shortBox" id="TenCenterPink" maxlength="3" size="1" type="number" />&nbsp;
-			</td>
-		</tr>
-	</tbody>
-</table>
+	<title>Olympia Robotics Poinsettia Sales</title>
+</head>
 
-<h3 class="text" id="OrderTotal"></h3>
+<body>
+	<p>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	</p>
+	<h1 class="text" style="text-align: center;color: white;">
+		Olympia Robotics Federation Poinsettia Sales
+	</h1>
 
-<p>
-	&nbsp;
-</p>
+	<form id="orderForm" method="post" action="createOrder.php">
+		<fieldset>
+			<legend>
+				<h2 class="text">Poinsettia Order:</h2>
+			</legend>
+			<table border="1" cellpadding="10" cellspacing="0" style="width:50%;margin: auto;color:white;">
+				<tbody>
+					<tr>
+						<td>
+							Size
+						</td>
+						<td>
+							Red
+						</td>
+						<td>
+							White
+						</td>
+						<td>
+							Pink
+						</td>
+					</tr>
+					<tr>
+						<td>
+							6&quot; Pot ($12)
+						</td>
+						<td>
+							<input class="shortBox" name="SixRed" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="SixWhite" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="SixPink" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td>
+							8 1/2&quot; Pot ($24)
+						</td>
+						<td>
+							<input class="shortBox" name="EightPointFiveRed" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="EightPointFiveWhite" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="EightPointFivePink" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td>
+							10&quot; Pot ($36)
+						</td>
+						<td>
+							<input class="shortBox" name="TenRed" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="TenWhite" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="TenPink" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td>
+							10&quot; Hanging Pot ($36)
+						</td>
+						<td>
+							<input class="shortBox" name="TenHangingRed" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="TenHangingWhite" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="TenHangingPink" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td>
+							10&quot; Centerpiece ($36)
+						</td>
+						<td>
+							<input class="shortBox" name="TenCenterRed" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="TenCenterWhite" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+						<td>
+							<input class="shortBox" name="TenCenterPink" maxlength="3" size="1" type="number" />&nbsp;
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
+			<h3 class="text" id="OrderTotal"></h3>
 
-<h2 class="text" >
-	Special Order Instructions
-</h2>
-
-<p >
-	<textarea id="SpecialOrderInstructions"></textarea>
-</p>
-
-<p style="color:white;">
-Mixed colors available in 10&quot size only.<br>
-(Color combinations cannot be guaranteed)
-</p>
-
-<p>
-	&nbsp;
-</p>
-</fieldset>
-<p>
-	&nbsp;
-</p>
-
-<fieldset>
-<legend>
-<h2 class="text">
-	Delivery Date:
-</h2>
-</legend>
-
-<p style="margin:0 auto;color:white;color:white;width:350px">
-	<input class="radio" name="DeliveryDate" type="radio" value="11/22/2016" /> 11/22/2016 (Red plants only)<br />
-	<input class="radio" name="DeliveryDate" type="radio" value="11/29/2016" /> 11/29/2016 (Red plants only)<br />
-	<input class="radio" name="DeliveryDate" type="radio" value="12/6/2016" /> 12/6/2016<br />
-	<input checked="checked" class="radio" name="DeliveryDate" type="radio" value="12/13/2016" /> 12/13/2016
-</p>
-<p>
-	&nbsp;
-</p>
-
-</fieldset>
-
-<p >
-	&nbsp;
-</p>
-
-<fieldset>
-<legend>
-<h2 class="text">
-	Payment:
-</h2>
-</legend>
-
-<p style="margin:0 auto;color:white;color:white;width:150px">
-	<input checked="checked" class="radio" name="Payment" type="radio" value="In Advance" /> In Advance<br />
-	<input class="radio" name="Payment" type="radio" value="On Delivery" /> On Delivery
-</p>
-
-<p>
-	&nbsp;
-</p>
-</fieldset>
-<p>
-	&nbsp;
-</p>
-
-<fieldset>
-<legend><h2 class="text">Contact Info and Delivery Address</h2></legend>
-<h2 class="text" style="text-align: center;color: white;">
-	First Name:
-</h2>
-
-<p style="text-align: center;color: white;">
-	<input id="FirstName" type="text" />
-</p>
-
-<p style="text-align: center;color: white;">
-	&nbsp;
-</p>
-
-<h2 class="text" style="text-align: center;color: white;">
-	Last Name:
-</h2>
-
-<p >
-	<input id="LastName" type="text" />
-</p>
-
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	Address:
-</h2>
-
-<p >
-	<input id="Address1" placeholder="Line 1" type="text" /><br />
-	<input id="Address2" placeholder="Line 2" type="text" />
-</p>
-
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	City:
-</h2>
-
-<p >
-	<input id="City" type="text" />
-</p>
-
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	State:
-</h2>
-
-<p >
-	<input id="State" type="text" />
-</p>
-
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	Zip Code:
-</h2>
-
-<p >
-	<input id="ZipCode" type="number" />
-</p>
-
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	Phone Number:
-</h2>
-
-<p >
-	<input id="PhoneNumber" type="tel" />
-</p>
-
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	Email:
-</h2>
-
-<p >
-	<input id="Email" type="email" />
-</p>
-
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	Delivery Instructions:
-</h2>
-
-<p>
-	<textarea id="DeliveryInstructions"></textarea>
-</p>
-<p>
-	&nbsp;
-</p>
-</fieldset>
-<p >
-	&nbsp;
-</p>
-
-<h2 class="text" >
-	Salesperson:
-</h2>
-
-<p >
-	<input id="SalesPerson" type="text" />
-</p>
+			<p>
+				&nbsp;
+			</p>
 
 
+			<h2 class="text">
+				Special Order Instructions
+			</h2>
 
-<p>
-	&nbsp;
-</p>
+			<p>
+				<textarea name="SpecialOrderInstructions"></textarea>
+			</p>
 
-<p>
-	<input id="PlaceOrder" value="Place Order" type="submit" style="margin:auto;display:block;width200px;height:50px;background-color:#ead75d;font-size:24px;font-weight:bold;"/>
-</p>
-</form>
-<div id="result" style="font-size:36px;font-weight:bold;color:white;text-align:center;"></div>
-    </body>
+			<p style="color:white;">
+				Mixed colors available in 10&quot size only.
+				<br> (Color combinations cannot be guaranteed)
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+		</fieldset>
+		<p>
+			&nbsp;
+		</p>
+
+		<fieldset>
+			<legend>
+				<h2 class="text">
+					Delivery Date:
+				</h2>
+			</legend>
+
+			<p style="margin:0 auto;color:white;color:white;width:350px">
+				<input class="radio" name="DeliveryDate" type="radio" value="11/22/2016" /> 11/22/2016 (Red plants only)
+				<br />
+				<input class="radio" name="DeliveryDate" type="radio" value="11/29/2016" /> 11/29/2016 (Red plants only)
+				<br />
+				<input class="radio" name="DeliveryDate" type="radio" value="12/6/2016" /> 12/6/2016
+				<br />
+				<input checked="checked" class="radio" name="DeliveryDate" type="radio" value="12/13/2016" /> 12/13/2016
+			</p>
+			<p>
+				&nbsp;
+			</p>
+
+		</fieldset>
+
+		<p>
+			&nbsp;
+		</p>
+
+		<fieldset>
+			<legend>
+				<h2 class="text">
+					Payment:
+				</h2>
+			</legend>
+
+			<p style="margin:0 auto;color:white;color:white;width:150px">
+				<input checked="checked" class="radio" name="Payment" type="radio" value="In Advance" /> In Advance
+				<br />
+				<input class="radio" name="Payment" type="radio" value="On Delivery" /> On Delivery
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+		</fieldset>
+		<p>
+			&nbsp;
+		</p>
+
+		<fieldset>
+			<legend>
+				<h2 class="text">Contact Info and Delivery Address</h2>
+			</legend>
+			<h2 class="text" style="text-align: center;color: white;">
+				First Name:
+			</h2>
+
+			<p style="text-align: center;color: white;">
+				<input name="FirstName" type="text" />
+			</p>
+
+			<p style="text-align: center;color: white;">
+				&nbsp;
+			</p>
+
+			<h2 class="text" style="text-align: center;color: white;">
+				Last Name:
+			</h2>
+
+			<p>
+				<input name="LastName" type="text" />
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+
+			<h2 class="text">
+				Address:
+			</h2>
+
+			<p>
+				<input name="Address1" placeholder="Line 1" type="text" />
+				<br />
+				<input name="Address2" placeholder="Line 2" type="text" />
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+
+			<h2 class="text">
+				City:
+			</h2>
+
+			<p>
+				<input name="City" type="text" />
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+
+			<h2 class="text">
+				State:
+			</h2>
+
+			<p>
+				<input name="State" type="text" />
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+
+			<h2 class="text">
+				Zip Code:
+			</h2>
+
+			<p>
+				<input name="ZipCode" type="number" />
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+
+			<h2 class="text">
+				Phone Number:
+			</h2>
+
+			<p>
+				<input name="PhoneNumber" type="tel" />
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+
+			<h2 class="text">
+				Email:
+			</h2>
+
+			<p>
+				<input name="Email" type="email" />
+			</p>
+
+			<p>
+				&nbsp;
+			</p>
+
+			<h2 class="text">
+				Delivery Instructions:
+			</h2>
+
+			<p>
+				<textarea name="DeliveryInstructions"></textarea>
+			</p>
+			<p>
+				&nbsp;
+			</p>
+		</fieldset>
+		<p>
+			&nbsp;
+		</p>
+
+		<h2 class="text">
+			Salesperson:
+		</h2>
+
+		<p>
+			<input name="SalesPerson" type="text" />
+		</p>
+
+
+
+		<p>
+			&nbsp;
+		</p>
+
+		<p>
+			<input name="PlaceOrder" value="Place Order" type="submit" style="margin:auto;display:block;width:200px;height:50px;background-color:#ead75d;font-size:24px;font-weight:bold;"
+			/>
+		</p>
+	</form>
+	<div id="result" style="font-size:36px;font-weight:bold;color:white;text-align:center;"></div>
+</body>
+
 </html>

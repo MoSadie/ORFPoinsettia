@@ -1,10 +1,5 @@
 $(function() {
 	$("input").change(function() {updateOrderTotal();});
-	
-	$("#orderForm").submit(function( event ) {
-		alert( "Handler for .submit() called." );
-		event.preventDefault();
-	});
 });
 
 function updateOrderTotal() {
