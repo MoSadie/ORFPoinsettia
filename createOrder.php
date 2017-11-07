@@ -12,14 +12,13 @@ $connectionOptions = array(
     "PWD" => $db_password
 );
 
-
 $db_conn = sqlsrv_connect($db_hostname, $connectionOptions);
 
 if ($db_conn == false) {
 	echo "Something went wrong.<br/>";
 	var_dump(sqlsrv_errors());
 	echo "<br/> Dumping data";
-	var_dump($db_hostname);
+	var_dump($connectionOptions); //REMOVE BEFORE FINAL
 	exit;
 }
 
