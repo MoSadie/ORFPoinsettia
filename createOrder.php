@@ -4,6 +4,9 @@ if (!isSet($_POST)) {
     exit;
 }
 
+var_dump($_POST);
+exit;
+
 include "scripts/config.php";
 
 $connectionOptions = array(
