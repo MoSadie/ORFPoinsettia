@@ -23,7 +23,7 @@ $getResults= sqlsrv_query($db_conn, $query);
 if ($getResults != false) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . sqlsrv_errors();
+    echo "Error: " . $query . "<br>" . var_dump(sqlsrv_errors());
 }
 
 sqlsrv_free_stmt($getResults);
