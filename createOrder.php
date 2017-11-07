@@ -8,7 +8,7 @@ include "scripts/config.php";
 
 $connectionOptions = array(
     "Database" => $db_database,
-    "UID" => $db_username,
+    "Uid" => $db_username,
     "PWD" => $db_password
 );
 
@@ -17,8 +17,10 @@ $db_conn = sqlsrv_connect($db_hostname, $connectionOptions);
 if ($db_conn == false) {
 	echo "Something went wrong.<br/>";
 	var_dump(sqlsrv_errors());
-	echo "<br/> Dumping data";
-	var_dump($connectionOptions); //REMOVE BEFORE FINAL
+	echo "<br/> Dumping data ";
+    var_dump($connectionOptions); //REMOVE BEFORE FINAL
+    echo "<br/> Hostname ";
+    var_dump($db_hostname);
 	exit;
 }
 
