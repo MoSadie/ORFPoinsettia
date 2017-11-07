@@ -4,7 +4,7 @@ if (!isSet($_POST)) {
     exit;
 }
 
-include "config.php";
+include "scripts/config.php";
 
 $db_conn = new mysqui($db_hostname,$db_hostname,$db_password);
 
