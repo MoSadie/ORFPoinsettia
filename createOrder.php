@@ -4,9 +4,6 @@ if (!isSet($_POST)) {
     exit;
 }
 
-var_dump($_POST);
-exit;
-
 include "scripts/config.php";
 
 $connectionOptions = array(
@@ -26,7 +23,8 @@ $getResults= sqlsrv_query($db_conn, $query);
 if ($getResults != false) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $query . "<br>" . var_dump(sqlsrv_errors());
+    echo "Error: " . $query . "<br>";
+	var_dump(sqlsrv_errors());
 }
 
 sqlsrv_free_stmt($getResults);
