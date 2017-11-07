@@ -15,12 +15,7 @@ $connectionOptions = array(
 $db_conn = sqlsrv_connect($db_hostname, $connectionOptions);
 
 if ($db_conn == false) {
-	echo "Something went wrong.<br/>";
-	var_dump(sqlsrv_errors());
-	echo "<br/> Dumping data ";
-    var_dump($connectionOptions); //REMOVE BEFORE FINAL
-    echo "<br/> Hostname ";
-    var_dump($db_hostname);
+	$success = false;
 	exit;
 }
 
@@ -30,12 +25,23 @@ VALUES ('".$_POST["SixRed"]."','".$_POST["SixWhite"]."','".$_POST["SixPink"]."',
 
 $getResults= sqlsrv_query($db_conn, $query);
 
-if ($getResults != false) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $query . "<br>";
-	var_dump(sqlsrv_errors());
-}
+$success = $getResults != false;
+
 
 sqlsrv_free_stmt($getResults);
 ?>
+<html>
+    <head>
+        <title>Olympia Robotics Poinsettia Sales</title>
+        <link rel="stylesheet" href="Home.css"/>
+    </head>
+    <body>
+        <div style="margin:auto">
+            <h1>
+                <?php if ($success) echo "Your order was successfully placed!";
+                    else echo "Something went wrong, please go back and try again.";
+                ?>
+            </h1>
+        </div>
+    </body>
+</html>
