@@ -12,9 +12,9 @@ if ($configFile == null) {
     exit;
 }
 
-$db_username = array_pop($configFile);
-$db_password = array_pop($configFile);
-$db_hostname = array_pop($configFile);
-$db_database = array_pop($configFile);
-$db_table = array_pop($configFile);
+$db_username = trim(array_pop($configFile));
+$db_password = trim(array_pop($configFile));
+$db_hostname = trim(array_pop($configFile));
+$db_database = trim(array_pop($configFile));
+$db_table = trim(array_pop($configFile));
 ?>
