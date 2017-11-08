@@ -46,11 +46,11 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
         array(
             'method'  => 'POST',
             'header'  => 'Content-type: application/json',
-            'content' => $postdata
+            'content' => $postData
         )
         );
 
-        $context = stream_context_create($opts);
+        $context = stream_context_create($options);
         $result = file_get_contents('https://maker.ifttt.com/trigger/'.$email_event_code.'/with/key/'.$email_event_key, false, $context);
 }
 ?>
