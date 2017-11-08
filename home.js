@@ -25,18 +25,6 @@ function updateOrderTotal() {
 		var TenWhite = Number($("input[name='TenWhite']").val());
 		
 		var TenPink = Number($("input[name='TenPink']").val());
-		
-		var TenHangingRed = Number($("input[name='TenHangingRed']").val());
-		
-		var TenHangingWhite = Number($("input[name='TenHangingWhite']").val());
-		
-		var TenHangingPink = Number($("input[name='TenHangingPink']").val());
-		
-		var TenCenterRed = Number($("input[name='TenCenterRed']").val());
-		
-		var TenCenterWhite = Number($("input[name='TenCenterWhite']").val());
-		
-		var TenCenterPink = Number($("input[name='TenCenterPink']").val());
 				
-		$("#OrderTotal").text("Current Total: $" + (12*(SixPink+SixRed+SixWhite) + 24*(EightPointFivePink+EightPointFiveRed+EightPointFiveWhite) + 36*(TenPink+TenRed+TenWhite) + 36*(TenCenterPink+TenCenterRed+TenCenterWhite+TenHangingPink+TenHangingRed+TenHangingWhite)));
+		$("#OrderTotal").text("Current Total: $" + (12*(SixPink+SixRed+SixWhite) + 24*(EightPointFivePink+EightPointFiveRed+EightPointFiveWhite) + 36*(TenPink+TenRed+TenWhite)));
 }
