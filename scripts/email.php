@@ -59,13 +59,13 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
             <br/>".
             (($_POST["SpecialOrderInstructions"] != "") ?
                 "Special order instructions given:<br/>".
-                $_POST["SpecialOrderInstructions"]."<br/>"
+                $_POST["SpecialOrderInstructions"]."<br/><br/>"
                 :
                 ""
             ).
             (($_POST["DeliveryInstructions"] != "") ?
             "Delivery instructions given:<br/>".
-            $_POST["DeliveryInstructions"]."<br/>"
+            $_POST["DeliveryInstructions"]."<br/><br/>"
             :
             ""
             ).
