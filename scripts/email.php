@@ -5,7 +5,8 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
             'value1' => $_POST["Email"],
             'value2' => "Dear ".$_POST["FirstName"].",<br/>
             <br/>
-            Thank you for supporting the Olympia Robotics Federation! Your poinsettia order number is ".$orderNumber.". Your poinsettias should be available by ".$_POST["DeliveryDate"]."<br/>
+            Thank you for supporting the Olympia Robotics Federation!<br/>
+            Your poinsettia order number is ".$orderNumber.". Your poinsettias should be available by ".$_POST["DeliveryDate"]."<br/>
             <br/>
             <br/>
             Your receipt:<br/>
