@@ -30,6 +30,10 @@ $success = $getResults != false;
 
 if ($success) {
     $orderNumber = sqlsrv_fetch_array($getResults)[0];
+    if ($_POST["Email"] != "") {
+        include_once "scripts/email.php";
+        sendEmail();
+    }
 }
 
 sqlsrv_free_stmt($getResults);

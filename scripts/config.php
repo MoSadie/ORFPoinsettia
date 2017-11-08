@@ -17,4 +17,6 @@ $db_password = trim(array_pop($configFile));
 $db_hostname = trim(array_pop($configFile));
 $db_database = trim(array_pop($configFile));
 $db_table = trim(array_pop($configFile));
+$email_event_code = trim(array_pop($configFile));
+$email_event_key = trim(array_pop($configFile));
 ?>
