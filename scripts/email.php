@@ -1,8 +1,7 @@
 <?php
 function sendEmail($orderNumber, $email_event_code, $email_event_key) {
     include_once "config.php";
-    $postData = http_build_query(
-        array(
+    $postData = json_encode(array(
             'value1' => $_POST["Email"],
             'value2' => "Thank you ".$_POST["FirstName"]." for your order!
             Your order number is ".$orderNumber."
@@ -41,13 +40,12 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
             
             Thank you for supporting robotics!
             ".$_POST["SalesPerson"]
-        )
-        );
+        ));
 
         $options = array( 'http' =>
         array(
             'method'  => 'POST',
-            'header'  => 'Content-type: application/x-www-form-urlencoded',
+            'header'  => 'Content-type: application/json',
             'content' => $postdata
         )
         );
