@@ -1,7 +1,7 @@
 <?php
 function sendEmail($orderNumber, $email_event_code, $email_event_key) {
     include_once "config.php";
-    $postData = json_encode(array(
+    $postData = http_build_query(array(
             'value1' => $_POST["Email"],
             'value2' => "Thank you ".$_POST["FirstName"]." for your order!
             Your order number is ".$orderNumber."
@@ -45,7 +45,7 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
         $options = array( 'http' =>
         array(
             'method'  => 'POST',
-            'header'  => 'Content-type: application/json',
+            'header'  => 'Content-type: application/x-www-form-urlencoded',
             'content' => $postData
         )
         );
