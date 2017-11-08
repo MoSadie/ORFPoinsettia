@@ -4,7 +4,7 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
     $postData = http_build_query(array(
             'value1' => $_POST["Email"],
             'value2' => "Thank you ".$_POST["FirstName"]." for your order!<br/>
-            Your order number is ".$orderNumber."<br/>
+            Your order number is ".$orderNumber.".<br/>
             Your poinsettias should be delivered by ".$_POST["DeliveryDate"]."<br/>
             <br/>
             <br/>
