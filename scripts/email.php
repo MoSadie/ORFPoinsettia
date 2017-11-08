@@ -5,7 +5,7 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
             'value1' => $_POST["Email"],
             'value2' => "Dear ".$_POST["FirstName"].",<br/>
             <br/>
-            Thank you for supporting the Olympia Robotics Federation! Your poinsettia order number is ".$orderNumber." and should be available by ".$_POST["DeliveryDate"]."<br/>
+            Thank you for supporting the Olympia Robotics Federation! Your poinsettia order number is ".$orderNumber.". Your poinsettias should be available by ".$_POST["DeliveryDate"]."<br/>
             <br/>
             <br/>
             Your receipt:<br/>
@@ -58,13 +58,13 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
             You elected to ".($_POST["Payment"] == "On Delivery" ? "on delivery" : "pay in advance").".<br/>
             <br/>".
             (($_POST["SpecialOrderInstructions"] != "") ?
-                "Special order instructions given:<br/>".
+                "Special order instructions:<br/>".
                 $_POST["SpecialOrderInstructions"]."<br/><br/>"
                 :
                 ""
             ).
             (($_POST["DeliveryInstructions"] != "") ?
-            "Delivery instructions given:<br/>".
+            "Delivery instructions:<br/>".
             $_POST["DeliveryInstructions"]."<br/><br/>"
             :
             ""
