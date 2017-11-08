@@ -1,5 +1,5 @@
 <?php
-function sendEmail() {
+function sendEmail($orderNumber, $email_event_code, $email_event_key) {
     include_once "config.php";
     $postData = http_build_query(
         array(

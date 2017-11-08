@@ -32,7 +32,7 @@ if ($success) {
     $orderNumber = sqlsrv_fetch_array($getResults)[0];
     if ($_POST["Email"] != "") {
         include_once "scripts/email.php";
-        sendEmail();
+        sendEmail($orderNumber, $email_event_code, $email_event_key);
     }
 }
 
