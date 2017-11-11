@@ -56,7 +56,7 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
                 "").
             "Total: $". (12*($_POST["SixPink"]+$_POST["SixRed"]+$_POST["SixWhite"]) + 24*($_POST["EightPointFivePink"]+$_POST["EightPointFiveRed"]+$_POST["EightPointFiveWhite"]) + 36*($_POST["TenPink"]+$_POST["TenRed"]+$_POST["TenWhite"]) + 36*($_POST["TenCenterPink"]+$_POST["TenCenterRed"]+$_POST["TenCenterWhite"]+$_POST["TenHangingPink"]+$_POST["TenHangingRed"]+$_POST["TenHangingWhite"]))."<br/>
             <br/>
-            You elected to ".($_POST["Payment"] == "On Delivery" ? "on delivery" : "pay in advance").".<br/>
+            You elected to pay ".($_POST["Payment"] == "On Delivery" ? "on delivery" : "in advance").".<br/>
             <br/>".
             (($_POST["SpecialOrderInstructions"] != "") ?
                 "Special order instructions:<br/>".
