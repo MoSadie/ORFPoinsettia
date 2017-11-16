@@ -20,7 +20,7 @@ function sendEmail($orderNumber, $email_event_code, $email_event_key) {
                 :
                 ""
             ).
-            (($_POST["EightPointFiveRed"]+$_POST["EightPointFivePink"]+$_POST["EightPointFivePink"] > 0) ?
+            (($_POST["EightPointFiveRed"]+$_POST["EightPointFiveWhite"]+$_POST["EightPointFivePink"] > 0) ?
                 "8 1/2\" Poinsettias: ($24 each)<br/>"
                     .(($_POST["EightPointFiveRed"] > 0) ? "Red: ".$_POST["EightPointFiveRed"]."<br/>" : "").
                     (($_POST["EightPointFiveWhite"] > 0) ? "White: ".$_POST["EightPointFiveWhite"]."<br/>" : "").
