@@ -20,12 +20,12 @@ if ($db_conn == false) {
     exit;
 }
 
-$query = "SELECT * FROM ".$db_database;
+$query = "SELECT * FROM ".$db_table;
 
 $getResults = sqlsrv_query($db_conn, $query);
 
 if ($getResults == false) {
-    $error = "Error getting results.".$db_database;
+    $error = "Error getting results.";
     include "scripts/error.php";
     exit;
 }
