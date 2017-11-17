@@ -34,6 +34,7 @@ if ($getResults == false) {
 header('Content-Type: text/csv');
 header('Content-Disposition: attachment; filename="Poinsettia Data.csv"');
 
+echo "Order Number,Red 6in,White 6in,Pink 6in,Red 8 1/2in,White8 1/2in,Pink8 1/2in,Red 10in,White 10in,Pink 10in,Special Instructions,Delivery Date,Pay On Delivery,First Name,Last Name,Address Line 1,Address Line 2,City,State,Zip code,Phone Number,Email,Delivery Instructions,Salesperson".PHP_EOL;
 while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
     echo trim($row[0]).",".trim($row[1]).",".trim($row[2]).",".trim($row[3]).",".trim($row[4]).",".trim($row[5]).",".trim($row[6]).",".trim($row[7]).",".trim($row[8]).",".trim($row[9]).",".trim($row[10]).",".trim($row[11]->format("y-m-d")).",".trim($row[12]).",".trim($row[13]).",".trim($row[14]).",".trim($row[15]).",".trim($row[16]).",".trim($row[17]).",".trim($row[18]).",".trim($row[19]).",".trim($row[20]).",".trim($row[21]).",".trim($row[22]).",".trim($row[23]).PHP_EOL;
 }
