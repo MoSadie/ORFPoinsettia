@@ -35,11 +35,11 @@ if ($getResults == false) {
 //header('Content-Disposition: attachment; filename="Poinsettia Data.csv"');
 
 while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
-    var_dump($row);
+    $string = "";
     for ($i = 0; $i < (count($row)-1); $i++) {
-        echo $row[i];
+        $string = $string.$row[i];
     }
-    echo $row[count($row)-1].PHP_EOL;
+    echo $string.$row[count($row)-1].PHP_EOL;
 }
 
 ?>
