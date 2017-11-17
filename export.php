@@ -35,6 +35,7 @@ if ($getResults == false) {
 //header('Content-Disposition: attachment; filename="Poinsettia Data.csv"');
 
 while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
+    var_dump($row);
     for ($i = 0; $i < (count($row)-1); $i++) {
         echo $row[i];
     }
