@@ -36,7 +36,7 @@ if ($getResults == false) {
 
 while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
     $string = "";
-    for ($i = 0; $i < (count($row)-1); $i++) {
+    for ($i = 0; $i+1 < count($row); $i++) {
         $string = $string.$row[i];
     }
     echo $string.$row[count($row)-1].PHP_EOL;
