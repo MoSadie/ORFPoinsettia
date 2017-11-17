@@ -5,6 +5,6 @@
     </head>
     <body>
         <h1>Something went wrong. Please try again later.</h1><br/>
-        <?php if (isSet($_GET["error"])) echo $_GET["error"]; ?>
+        <?php if (isSet($error)) echo $error ?>
     </body>
 </html>
