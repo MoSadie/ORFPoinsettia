@@ -39,7 +39,7 @@ while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
     for ($i = 0; $i+1 < count($row); $i++) {
         $string = $string.$row[i];
     }
-    echo $string.$row[count($row)-1].PHP_EOL;
+    echo $string.PHP_EOL.$row[count($row)-1].PHP_EOL;
 }
 
 ?>
