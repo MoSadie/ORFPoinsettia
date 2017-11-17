@@ -42,7 +42,6 @@ sqlsrv_free_stmt($getResults);
     <head>
         <title>Olympia Robotics Poinsettia Sales</title>
         <link rel="stylesheet" href="Home.css"/>
-        <link href="favicon.png" rel="icon">
     </head>
     <body>
         <div style="margin:auto">
