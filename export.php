@@ -31,8 +31,8 @@ if ($getResults == false) {
 }
 
 //Setup download of this as a csv
-header('Content-Type: text/csv');
-header('Content-Disposition: attachment; filename="Poinsettia Data.csv"');
+//header('Content-Type: text/csv');
+//header('Content-Disposition: attachment; filename="Poinsettia Data.csv"');
 
 while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
     for ($i = 0; $i < (count($row)-1); $i++) {
