@@ -15,7 +15,7 @@ $connectionOptions = array(
 $db_conn = sqlsrv_connect($db_hostname, $connectionOptions);
 
 if ($db_conn == false) {
-    include "scripts/error.php";
+    include "scripts/error.php?error=Connection%20Failed";
     exit;
 }
 
@@ -24,7 +24,7 @@ $query = "SELECT * FROM ".$db_database;
 $getResults = sqlsrv_query($db_conn, $query);
 
 if ($getResults == false) {
-    include "scripts/error.php";
+    include "scripts/error.php?error=Error%20getting%20results";
     exit;
 }
 
