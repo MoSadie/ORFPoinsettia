@@ -5,6 +5,7 @@ $(function() {
 		$("input[name='PlaceOrder']").attr("disabled",true);
 		if ($("input[name='SalesPerson']").val() == "") {
 			$("input[name='SalesPerson']").val("Olympia Robotics Federation");
+		}
 		$("#result").text("Submitting order...");
 	});
 });
